@@ -46,7 +46,7 @@ def gerar_grafico_sem_axis(coordinates):
     plt.grid(False)
     plt.axis('off')
     # Mostra o gráfico.
-    plt.savefig("testplot.png", bbox_inches=0)
+    plt.savefig("ex1.png", bbox_inches=0)
     plt.show()
 
 def gerar_grafico(coordinates):
@@ -54,7 +54,7 @@ def gerar_grafico(coordinates):
 
     # Define os limites dos eixos x.
     plt.xlim([np.nanmax(coordinates[:, 1]) + 2, min(coordinates[:, 1]) - 2])
-
+    plt.savefig("ex1.png", bbox_inches=0)
     # Mostra o gráfico.
     plt.show()
 # Press the green button in the gutter to run the script.

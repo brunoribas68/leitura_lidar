@@ -47,7 +47,7 @@ def gerar_grafico_sem_axis(coordinates):
     plt.grid(False)
     plt.axis('off')
     # Mostra o gráfico.
-    plt.savefig("testplot.png", bbox_inches=0)
+    plt.savefig("grafico_original.png", bbox_inches=0)
     plt.show()
 
 def gerar_grafico(coordinates):
@@ -55,12 +55,13 @@ def gerar_grafico(coordinates):
 
     # Define os limites dos eixos x.
     plt.xlim([np.nanmax(coordinates[:, 1]) + 2, min(coordinates[:, 1]) - 2])
+    plt.savefig("ex4.png", bbox_inches=0)
 
     # Mostra o gráfico.
     plt.show()
 
 def identify_corners():
-    image = cv2.imread('testplot.png')
+    image = cv2.imread('grafico_original.png')
 
     # convert the input image into
     # grayscale color space
@@ -88,6 +89,9 @@ def identify_corners():
     # De-allocate any associated memory usage
     if cv2.waitKey(0) & 0xff == 27:
         cv2.destroyAllWindows()
+
+    cv2.imwrite('ex4.jpg', image)
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
