@@ -3,6 +3,7 @@ Desafio leitura arquivo Lidar
 
 ## install venv
 `venv/Scripts/activate`
+
 `pip install -r packages.txt`
 
 ![Imagem do WhatsApp de 2023-10-27 à(s) 19 54 26_04141e74](https://github.com/brunoribas68/leitura_lidar/assets/25181506/7542919b-f82d-4a81-a32a-05645930ed38)
