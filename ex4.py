@@ -47,7 +47,7 @@ def gerar_grafico_sem_axis(coordinates):
     plt.grid(False)
     plt.axis('off')
     # Mostra o gráfico.
-    plt.savefig("grafico_original.png", bbox_inches=0)
+    plt.savefig("images/grafico_original.png", bbox_inches=0)
     plt.show()
 
 def gerar_grafico(coordinates):
@@ -61,7 +61,7 @@ def gerar_grafico(coordinates):
     plt.show()
 
 def identify_corners():
-    image = cv2.imread('grafico_original.png')
+    image = cv2.imread('images/grafico_original.png')
 
     # convert the input image into
     # grayscale color space
@@ -90,7 +90,7 @@ def identify_corners():
     if cv2.waitKey(0) & 0xff == 27:
         cv2.destroyAllWindows()
 
-    cv2.imwrite('ex4.jpg', image)
+    cv2.imwrite('images/ex4.jpg', image)
 
 
 # Press the green button in the gutter to run the script.
